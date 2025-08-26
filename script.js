@@ -13,7 +13,7 @@ async function convertCurrency() {
 
   try {
     // Fetch data from your API
-    const response = await fetch(`https://api.budjet.in/fiat/${baseCurrency}/${targetCurrency}/${amount}`);
+    const response = await fetch(`https://api.budjet.org/fiat/${baseCurrency}/${targetCurrency}/${amount}`);
     const data = await response.json();
 
     if (data.result === 'success') {
@@ -31,3 +31,4 @@ async function convertCurrency() {
     console.error(error);
   }
 }
+
